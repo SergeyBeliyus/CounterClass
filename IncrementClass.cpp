@@ -27,7 +27,7 @@ public:
 
 int main() {
 	std::string input;
-	int start;
+	int start = 0;
 	bool input_control;
 
 	SetConsoleCP(1251);
