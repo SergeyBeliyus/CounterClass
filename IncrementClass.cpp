@@ -8,13 +8,8 @@ private:
 
 public:
 
-	Counter() {
-		number = 0;
-	}
-
-	int set(int number) {
+	Counter(int number) {
 		this->number = number;
-		return number;
 	}
 
 	int inc() {
@@ -34,7 +29,6 @@ int main() {
 	std::string input;
 	int start;
 	bool input_control;
-	Counter count;
 
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -60,13 +54,12 @@ int main() {
 			std::cin.clear();
 		}
 		else {
-			count.set(start);
 			std::cin.clear();
 			input_control = true;
 		}
 
 	}
-
+	Counter count(start);
 	while (input != "x") {
 		std::cout << "Введите команду('+', '-', '=' или 'x'): ";
 		std::cin >> input;
